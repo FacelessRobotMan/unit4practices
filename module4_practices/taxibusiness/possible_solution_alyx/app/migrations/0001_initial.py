@@ -7,20 +7,27 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Taxi',
+            name="Taxi",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('occupied', models.BooleanField()),
-                ('capaciy', models.IntegerField()),
-                ('fare', models.FloatField()),
-                ('passengers', models.IntegerField()),
-                ('notes', models.TextField(default='', null=True)),
-                ('taxi_number', models.IntegerField(default=111)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("occupied", models.BooleanField()),
+                ("capaciy", models.IntegerField()),
+                ("fare", models.FloatField()),
+                ("passengers", models.IntegerField()),
+                ("notes", models.TextField(default="", null=True)),
+                ("taxi_number", models.IntegerField(default=111)),
             ],
         ),
     ]
