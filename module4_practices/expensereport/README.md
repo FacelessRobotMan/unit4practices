@@ -11,7 +11,7 @@ In this practice you need to accomplish the following:
 3. You should have the following functions capable in your model:
 
 - [ ] Create an Expense.
-- [ ] Update an Expense. You should be able to change any of the fields based on the argument given (if notes, change notes, etc.). You should not be able to put anything other than a date in datetime fashion in Date field or in Location.
+- [ ] Update an Expense. Given the id, you should prompt the user to change one of the given fields (date, location, amount, notes). It should then change the field. You should be able to change any of the fields based on the argument given (if notes, change notes, etc.). You should not be able to put anything other than a date in datetime fashion in Date field.
 - [ ] Delete an Expense given the object id.
 - [ ] Filter expenses by location, and amount.
 - [ ] Show a report of all expenses.

@@ -57,6 +57,7 @@ def finish_fare(taxi_number, distance):
         cost = distance * taxi.fare
         taxi.occupied = False
         taxi.passengers = 0
+        taxi.save()
         return cost
 
 
