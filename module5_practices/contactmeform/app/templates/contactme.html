@@ -1,0 +1,10 @@
+{% extends 'root.html' %} {%block content%}
+<form action="{% url 'contactme' %}" method="POST">
+  {% csrf_token %} {{ form.as_p }}
+
+  <button>Contact Me</button>
+</form>
+
+{% if first is not None %}
+<p>Your message has been sent!</p>
+{% endif %} {%endblock content%}
