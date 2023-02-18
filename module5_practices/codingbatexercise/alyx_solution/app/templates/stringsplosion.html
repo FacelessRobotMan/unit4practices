@@ -1,0 +1,12 @@
+{% extends 'base.html' %}{% block content %}
+
+<form action="{% url "stringsplosion" %}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>Press me pleaseeeeee</button>
+</form>
+
+{% if result is not None %}
+<p>The result is {{result}}</p>
+{% endif %}
+{% endblock content %}

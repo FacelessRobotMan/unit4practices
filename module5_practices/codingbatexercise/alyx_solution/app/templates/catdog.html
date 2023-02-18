@@ -1,0 +1,16 @@
+{% extends 'base.html' %}{% block content %}
+
+<form action="{% url "catdog" %}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>Press me pleaseeeeee</button>
+</form>
+
+{% if result is not None %}
+{% if result is True %}
+<p>Equal amount of cats and dogs.</p>
+{% endif %}
+{% if result is False %}
+<p>The war between cats and dogs are almost finished. The winner is soon to be decided.</p>{% endif %}
+{% endif %}
+{% endblock content %}

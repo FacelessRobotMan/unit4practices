@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %}
+<h3>
+  Click on the links below to go to the specific view page of that coding bat
+  over HTTP.
+</h3>
+<ul>
+  {% for i in list %}
+  <li><a href="{% url "details" i %}"><p>{{i}}</p></a></li>
+  {% endfor %}
+</ul>
+{% endblock content %}
