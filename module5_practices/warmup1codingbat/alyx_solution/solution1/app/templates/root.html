@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+<h3>
+  Click on the links below to go to the specific view page of that coding bat
+  over HTTP.
+</h3>
+<ul>
+  <li>
+    <a href="{% url 'sleepin' %}"><p>Warm-Up 1 - Sleep In</p></a>
+  </li>
+  <li>
+    <a href="{% url 'diff21' %}"><p>Warm-Up 1 - Diff21</p></a>
+  </li>
+  <li>
+    <a href="{% url 'sum' %}"><p>Warm-Up 1 - Sum Double</p></a>
+  </li>
+</ul>
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}{% block content %} 
+
+<form action="{% url "sleepin" %}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>Submit</button>
+</form>
+
+{% if result is True %}
+<p>You can sleep in!</p>
+{% endif %}
+
+{% if result is False %}
+<p>You can't sleep in!</p>
+{% endif %}
+
+
+{% endblock content %}

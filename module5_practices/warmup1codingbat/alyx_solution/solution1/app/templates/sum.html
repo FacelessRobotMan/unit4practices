@@ -1,0 +1,13 @@
+{% extends 'base.html' %}{% block content %} 
+
+<form action="{% url "sum" %}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>Submit</button>
+</form>
+
+{% if result is not None %}
+<p>The result is {{result}}.</p>
+{% endif %}
+
+{% endblock content %}

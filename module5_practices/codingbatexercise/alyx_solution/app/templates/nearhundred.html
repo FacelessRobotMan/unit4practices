@@ -1,0 +1,16 @@
+{% extends 'base.html' %}{% block content %}
+
+<form action="{% url "nearhundred" %}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>Press me pleaseeeeee</button>
+</form>
+
+{% if result is not None %}
+{% if result is True %}
+<p>You are near hundred.</p>
+{% endif %}
+{% if result is False %}
+<p>You are not near hundred.</p>{% endif %}
+{% endif %}
+{% endblock content %}

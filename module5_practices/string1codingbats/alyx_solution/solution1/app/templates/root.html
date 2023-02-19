@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+<h3>
+  Click on the links below to go to the specific view page of that coding bat
+  over HTTP.
+</h3>
+<ul>
+  <li>
+    <a href="{% url 'left2' %}"><p>String 1 - Left 2</p></a>
+  </li>
+  <li>
+    <a href="{% url 'combo' %}"><p>String 1 - Combo String</p></a>
+  </li>
+  <li>
+    <a href="{% url 'first_half' %}"><p>String 1 - First Half</p></a>
+  </li>
+</ul>
+{% endblock content %}
