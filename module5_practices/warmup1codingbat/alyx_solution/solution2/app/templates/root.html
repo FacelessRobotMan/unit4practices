@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<a href="{% url "root" %}">Main Page</a>
+
+<ul>
+    <li><a href="{% url "details" "sleepin" %}">Sleep In</a></li>
+    <li><a href="{% url "details" "sumdouble" %}">Sum Double</a></li>
+    <li><a href="{% url "details" "diff21" %}">Diff 21</a></li>
+</ul>
+
+{% endblock content %}
